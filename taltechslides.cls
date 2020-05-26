@@ -108,14 +108,13 @@
 \renewcommand{\maketitle}{%
 \usebackgroundtemplate{
 \begin{tikzpicture}[overlay, remember picture]
-\node[inner sep=0pt] at ($(current page.north)+(0,-3.3)$) {\includegraphics[width=\paperwidth, trim={0 0 0 0}, clip]{satellite.jpg}};
+\node[inner sep=0pt] at ($(current page.north)+(0,-3.3)$) {\includegraphics[width=\paperwidth, trim={0 0 0 0}, clip]{\imageTitlePage}};
 \fill [white] ($(current page.south west)!0.296296296!(current page.north west)$) rectangle (current page.south east);
 \fill [white] ($(current page.south west)!0.041666667!(current page.south east)$) rectangle ($(current page.south east)!0.444444444!(current page.north east)$);
 \fill [white] ($(current page.south west)!0.083333333!(current page.south east)$) rectangle ($(current page.south east)!0.518518519!(current page.north east)$);
-% \node at (current page.center) {\LARGE{\textbf{TALTECH}}};
 \path let \p1 = ($(current page.south east)!0.291666667!(current page.south west)$) in coordinate (ttux) at (\x1, 0);
 \path let \p1 = ($(current page.south east)!0.5025!(current page.north east)$) in coordinate (ttuy) at (0, \y1);
-\node [anchor=south west] at ($(ttux)+(ttuy)$) {\includegraphics[scale=0.25]{TalTech.png}};
+\node [anchor=south west] at ($(ttux)+(ttuy)$) {\includegraphics[scale=0.125,interpolate]{TalTech2.png}};
 
 \path let \p1 = ($(current page.south west)!0.125!(current page.south east)$) in coordinate (titlex) at (\x1, 0);
 \path let \p1 = ($(current page.south east)!0.296296296!(current page.north east)$) in coordinate (titley) at (0, \y1);
@@ -147,7 +146,7 @@
 \node [anchor=south west] (logo) at ($(current page.south west)+(0.5,0.5)$) {\includegraphics[scale=0.1]{TalTech_dark.png}};
 \node[anchor=west, TTUdark] at ($(logo)+(.8,0)$) {\color{TTUdark}\uppercase{\tiny \nameOfUniversity}};
 \draw[TTUdark] ($(logo.north)+(.75,-0.1)$) -- ($(logo.south)+(.75,0.1)$);
-\node [anchor=east, TTUred] at ($(logo)+(14,0)$) {\footnotesize{\uppercase{\textbf{\autorField}}}};
+\node [anchor=east, TTUred] at ($(logo)+(14,0)$) {\footnotesize{\uppercase{\textbf{\autorFieldShort}}}};
 \node [anchor=south, TTUblue] at ($(current page.south)+(0,0.15)$) {\footnotesize{\uppercase{\textbf{\titleNameShort}}}};
 \end{tikzpicture}
 }

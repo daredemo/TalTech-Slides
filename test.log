@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2020.1.21)  26 MAY 2020 19:24
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2020.1.21)  26 MAY 2020 22:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1267,15 +1267,17 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (./test.nav)
-File: satellite.jpg Graphic file (type bmp)
-<satellite.jpg>
-File: TalTech.png Graphic file (type bmp)
-<TalTech.png>
+File: ai.jpg Graphic file (type bmp)
+<ai.jpg>
+File: TalTech2.png Graphic file (type bmp)
+<TalTech2.png>
  [1
 
 ] (./test.toc) (./test.toc)
 File: TalTech_dark.png Graphic file (type bmp)
 <TalTech_dark.png>
+LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <9> not available
+(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 31.
  [2
 
 ]
@@ -1330,12 +1332,12 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 34358 strings out of 494412
- 706669 string characters out of 6163919
- 800395 words of memory out of 5000000
- 37661 multiletter control sequences out of 15000+600000
- 539518 words of font info for 70 fonts, out of 8000000 for 9000
+ 34364 strings out of 494412
+ 706784 string characters out of 6163919
+ 800435 words of memory out of 5000000
+ 37665 multiletter control sequences out of 15000+600000
+ 539526 words of font info for 71 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 64i,15n,71p,10523b,773s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,15n,71p,10523b,787s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on test.pdf (3 pages).
