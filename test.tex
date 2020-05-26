@@ -1,0 +1,41 @@
+% !TeX root = ./ground_extraction.tex
+% !TEX program = xelatex
+
+\documentclass{taltechslides}
+
+% DEFINE HOW TOC IS DISPLAYED
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+    % \frametitle{Outline}
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[currentsection, hideothersubsections, sections={1-3}]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[currentsection, hideothersubsections, sections={4-6}]
+        \end{column}
+    \end{columns}
+\end{frame}
+}
+
+\begin{document}
+
+% MAKE THE TITLE PAGE
+\maketitle
+
+% START NEW PART (optional?)
+\part{Main}
+
+% START NEW SECTION
+\section{One}
+
+% START NEW FRAME
+\begin{frame}[fragile]
+    \frametitle{Frame title}
+
+    \(E=mc^2\)
+
+\end{frame}
+
+\end{document}
