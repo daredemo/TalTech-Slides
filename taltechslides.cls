@@ -19,7 +19,7 @@
 %         BoldItalicFont = FreeSans Bold Oblique,
 %       ] {FreeSans}
 % \setmonofont[Scale=1.0]{FreeMono}
-\setmainfont[Ligatures = {TeX, Common}]{Verdana}
+\setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Verdana} % {Lato}
 
 
 \RequirePackage{tikz}
