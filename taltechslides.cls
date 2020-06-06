@@ -10,15 +10,16 @@
 \RequirePackage[squaren]{SIunits}
 \RequirePackage{multirow}
 
-\setmainfont
-      [ Ligatures = {TeX, Common},
-        SmallCapsFeatures={Letters=SmallCaps},
-        UprightFont    = FreeSans,
-        ItalicFont     = FreeSans Oblique,
-        BoldFont       = FreeSans Bold,
-        BoldItalicFont = FreeSans Bold Oblique,
-      ] {FreeSans}
-\setmonofont[Scale=1.0]{FreeMono}
+% \setmainfont
+%       [ Ligatures = {TeX, Common},
+%         SmallCapsFeatures={Letters=SmallCaps},
+%         UprightFont    = FreeSans,
+%         ItalicFont     = FreeSans Oblique,
+%         BoldFont       = FreeSans Bold,
+%         BoldItalicFont = FreeSans Bold Oblique,
+%       ] {FreeSans}
+% \setmonofont[Scale=1.0]{FreeMono}
+\setmainfont[Ligatures = {TeX, Common}]{Verdana}
 
 
 \RequirePackage{tikz}
