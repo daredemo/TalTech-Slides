@@ -7,6 +7,8 @@
 \RequirePackage{xltxtra}
 \RequirePackage{fontspec}
 \RequirePackage{mathptmx}% Times and maths
+\RequirePackage[squaren]{SIunits}
+\RequirePackage{multirow}
 
 \setmainfont
       [ Ligatures = {TeX, Common},
@@ -20,7 +22,7 @@
 
 
 \RequirePackage{tikz}
-\usetikzlibrary{arrows, shapes.arrows, arrows.meta, positioning, fit, calc, backgrounds, patterns}
+\usetikzlibrary{arrows, shapes.arrows, arrows.meta, positioning, fit, calc, backgrounds, patterns, 3d}
 
 \RequirePackage{environ}
 \makeatletter
@@ -79,7 +81,9 @@
 % \setbeamercovered{transparent}
 
 \setbeamertemplate{frametitle}{
-      \vspace{12pt}\expandafter\uppercase\expandafter\insertframetitle
+      \vspace{12pt}\expandafter%
+      %\uppercase
+      \expandafter\insertframetitle
 }
 
 
@@ -122,13 +126,13 @@
 \node [anchor=south west] at ($(titlex)+(titley)+(0,0.65)$) {\color{TTUred} \uppercase{\Large \textbf{\titleNameLongOne}}};
 \node [anchor=south west] at ($(titlex)+(titley)$) {\color{TTUpink} \uppercase{\Large \textbf{\titleNameLongTwo}}};
 % \makeatletter
-\node [anchor=south west] at ($(titlex)+(titley)-(0,0.75)$) {\color{TTUblue} \textbf{\autorField}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,0.9)$) {\color{TTUblue} \textbf{\autorField}};
 % \makeatother
-\node [anchor=south west] at ($(titlex)+(titley)-(0,1.25)$) {\color{TTUblue} \textbf{\nameOfSchool}};
-\node [anchor=south west] at ($(titlex)+(titley)-(0,1.75)$) {\color{TTUblue} \textbf{\nameOfDepartment}};
-\node [anchor=south west] at ($(titlex)+(titley)-(0,2.25)$) {\color{TTUblue} \textbf{\nameOfUniversity}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,1.55)$) {\color{TTUblue} {\footnotesize \nameOfSchool}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,1.9)$) {\color{TTUblue} {\footnotesize \nameOfDepartment}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,2.25)$) {\color{TTUblue} {\footnotesize \nameOfUniversity}};
 % \makeatletter
-\node [anchor=south west] at ($(titlex)+(titley)-(-11,2.25)$) {\color{TTUblue} \textbf{\dateOfPresentation}};
+\node [anchor=south west] at ($(titlex)+(titley)-(-11,2.25)$) {\color{TTUblue} {\footnotesize \dateOfPresentation}};
 % \makeatother
 \end{tikzpicture}
 }
