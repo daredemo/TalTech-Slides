@@ -1,8 +1,8 @@
-test.aux
-test.log
-test.nav
-test.out
-test.snm
-test.toc
-test.vrb
-test.synctex.gz
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.synctex.gz

@@ -1,7 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{taltechslides}[2020/05/26 Tallinn University of Technology slide template]
 
-\ProcessOptions\relax
 \LoadClass[table,aspectratio=169]{beamer}
 
 \RequirePackage{xltxtra}
@@ -9,6 +8,11 @@
 \RequirePackage{mathptmx}% Times and maths
 \RequirePackage[squaren]{SIunits}
 \RequirePackage{multirow}
+
+\DeclareOption{nonavigation}{%
+\beamertemplatenavigationsymbolsempty
+}
+\ProcessOptions\relax
 
 % \setmainfont
 %       [ Ligatures = {TeX, Common},
@@ -105,7 +109,7 @@
 % \newcommand*\dateOfPresentation[1]{\def\@dateOfPresentation{#1}}
 
 
-\input{taltechsidesdefinitions.tex}
+\input{taltechslidesdefinitions.tex}
 
 \date{}
 
