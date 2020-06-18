@@ -10,7 +10,17 @@
 \RequirePackage{multirow}
 
 \DeclareOption{nonavigation}{%
-\beamertemplatenavigationsymbolsempty
+  \beamertemplatenavigationsymbolsempty
+}
+\DeclareOption{topmenu}{%
+  \setbeamertemplate{headline}{%
+    \leavevmode%
+    \hbox{%
+      \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+      \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip 0pt plus1filll}
+      \end{beamercolorbox}%
+    }
+  }
 }
 \ProcessOptions\relax
 
