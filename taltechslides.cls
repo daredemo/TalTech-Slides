@@ -8,6 +8,7 @@
 \RequirePackage{mathptmx}% Times and maths
 \RequirePackage{siunitx}
 \RequirePackage{multirow}
+\RequirePackage{listings}
 \RequirePackage{ulem}
 
 \DeclareOption{nonavigation}{%
