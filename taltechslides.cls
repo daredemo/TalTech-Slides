@@ -105,14 +105,14 @@
 
 % definitions
 % \newcommand{\ignore}[1]{}
-% \newcommand\autorField{}
+% \newcommand\authorField{}
 % \newcommand\titleNameLongOne{}
 % \newcommand\titleNameLongTwo{}
 % \newcommand\titleNameShort{}
 % \newcommand\dateOfPresentation{}
 
 
-% \newcommand*\autorField[1]{\def\@autorField{#1}}
+% \newcommand*\authorField[1]{\def\@authorField{#1}}
 % \newcommand*\titleNameLongOne[1]{\def\@titleNameLongOne{#1}}
 % \newcommand*\titleNameLongTwo[1]{\def\@titleNameLongTwo{#1}}
 % \newcommand*\titleNameShort[1]{\def\@titleNameShort{#1}}
@@ -141,13 +141,15 @@
 \node [anchor=south west] at ($(titlex)+(titley)+(0,0.65)$) {\color{TTUred} \uppercase{\Large \textbf{\titleNameLongOne}}};
 \node [anchor=south west] at ($(titlex)+(titley)$) {\color{TTUpink} \uppercase{\Large \textbf{\titleNameLongTwo}}};
 % \makeatletter
-\node [anchor=south west] at ($(titlex)+(titley)-(0,0.9)$) {\color{TTUblue} \textbf{\autorField}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,0.9)$) {\color{TTUblue} \textbf{\authorField}};
 % \makeatother
-\node [anchor=south west] at ($(titlex)+(titley)-(0,1.55)$) {\color{TTUblue} {\footnotesize \nameOfSchool}};
-\node [anchor=south west] at ($(titlex)+(titley)-(0,1.9)$) {\color{TTUblue} {\footnotesize \nameOfDepartment}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,1.55)$) {\color{TTUblue} {\footnotesize \nameOfDepartment}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,1.9)$) {\color{TTUblue} {\footnotesize \nameOfSchool}};
 \node [anchor=south west] at ($(titlex)+(titley)-(0,2.25)$) {\color{TTUblue} {\footnotesize \nameOfUniversity}};
 % \makeatletter
-\node [anchor=south west] at ($(titlex)+(titley)-(-11,2.25)$) {\color{TTUblue} {\footnotesize \dateOfPresentation}};
+\node [anchor=south west] (cur-date) at ($(titlex)+(titley)-(-11,2.25)$) {\color{TTUblue} {\footnotesize \dateOfPresentation}};
+\node [anchor=south east] at ($(cur-date.north east)+(0,0.05)$) {\color{TTUblue} {\footnotesize \href{\authorFieldEMail}{\authorFieldEMail}}};
+
 % \makeatother
 \end{tikzpicture}
 }
@@ -165,7 +167,7 @@
 \node [anchor=south west] (logo) at ($(current page.south west)+(0.5,0.5)$) {\includegraphics[scale=0.1]{TalTech_dark.png}};
 \node[anchor=west, TTUdark] at ($(logo)+(.8,0)$) {\color{TTUdark}\uppercase{\tiny \nameOfUniversity}};
 \draw[TTUdark] ($(logo.north)+(.75,-0.1)$) -- ($(logo.south)+(.75,0.1)$);
-\node [anchor=east, TTUred] at ($(logo)+(14,0)$) {\footnotesize{\uppercase{\textbf{\autorFieldShort}}}};
+\node [anchor=east, TTUred] at ($(logo)+(14,0)$) {\footnotesize{\uppercase{\textbf{\authorFieldShort}}}};
 \node [anchor=south, TTUblue] at ($(current page.south)+(0,0.15)$) {\footnotesize{\uppercase{\textbf{\titleNameShort}}}};
 \end{tikzpicture}
 }
