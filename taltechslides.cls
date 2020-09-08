@@ -6,7 +6,7 @@
 \RequirePackage{xltxtra}
 \RequirePackage{fontspec}
 \RequirePackage{mathptmx}% Times and maths
-\RequirePackage[squaren]{SIunits}
+\RequirePackage{siunitx}
 \RequirePackage{multirow}
 
 \DeclareOption{nonavigation}{%
