@@ -37,7 +37,7 @@
 % \setmonofont[Scale=1.0]{FreeMono}
 \IfFontExistsTF{Verdana}{%
   \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Verdana}%
-}{
+}{%
   \IfFontExistsTF{Lato}{%
     \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Lato}%
   }{}%
