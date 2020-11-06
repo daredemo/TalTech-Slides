@@ -35,7 +35,15 @@
 %         BoldItalicFont = FreeSans Bold Oblique,
 %       ] {FreeSans}
 % \setmonofont[Scale=1.0]{FreeMono}
-\setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Verdana} % {Lato}
+\IfFontExistsTF{Verdana}{%
+  \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Verdana}%
+}{
+  \IfFontExistsTF{Lato}{%
+    \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Lato}%
+  }{}%
+}
+% \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Lato}
+% \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Verdana} % {Lato}
 
 
 \RequirePackage{tikz}
