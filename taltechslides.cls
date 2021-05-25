@@ -18,9 +18,20 @@
   \setbeamertemplate{headline}{%
     \leavevmode%
     \hbox{%
-      \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
-      \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip 0pt plus1filll}
-      \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.33\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+    \insertsectionnavigationhorizontal{0.33\paperwidth}{}{\hskip 0pt plus1filll}
+    % \hfill\insertsubsectionnavigationhorizontal{0.5\paperwidth}{}{\hskip 0pt plus1filll}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.34\paperwidth,ht=2.5ex,dp=1.125ex,center]{palette quaternary}%
+    % \insertsectionnavigationhorizontal{0.5\paperwidth}{}{\hskip 0pt plus1filll}
+    % \insertsubsectionnavigationhorizontal{0.34\paperwidth}{\hskip 0pt}{\hskip 0pt}%{\hskip 0pt plus1filll}
+    \insertsubsectionnavigationhorizontal{0.34\paperwidth}{\hskip 0pt plus1filll}{\hskip 0pt plus1filll}%{\hskip 0pt plus1filll}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.33\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+    % \insertsectionnavigationhorizontal{0.5\paperwidth}{}{\hskip 0pt plus1filll}
+    % \hfill\insertsubsubsectionnavigationhorizontal{0.33\paperwidth}{}{\hskip 0pt plus1filll}
+    \hfill\insertsubsubsection\hspace{1.5em}
+    \end{beamercolorbox}%
     }
   }
 }
@@ -44,6 +55,7 @@
 }
 % \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Lato}
 % \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Verdana} % {Lato}
+
 
 
 \RequirePackage{tikz}
@@ -85,7 +97,14 @@
 \setbeamercolor{alerted text}{fg=TTUpink}
 \setbeamercolor{normal text}{fg=TTUblue}
 
-\setbeamertemplate{footline}[frame number]
+% \setbeamertemplate{footline}[page number]
+\setbeamertemplate{footline}[text line]{%
+  \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.25ex,dp=2.25ex]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\hfill\insertpagenumber
+  \end{beamercolorbox}%
+% ]
+}
+% \setbeamertemplate{footline}[text line]{\hfill\insertpagenumber}
 \setbeamercolor{palette primary}{fg=TTUblue}
 \setbeamercolor{palette secondary}{fg=TTUblue}
 \setbeamercolor{palette tertiary}{fg=TTUblue}
@@ -151,14 +170,20 @@
 \node [anchor=south west] at ($(titlex)+(titley)+(0,0.65)$) {\color{TTUred} \uppercase{\Large \textbf{\titleNameLongOne}}};
 \node [anchor=south west] at ($(titlex)+(titley)$) {\color{TTUpink} \uppercase{\Large \textbf{\titleNameLongTwo}}};
 % \makeatletter
-\node [anchor=south west] at ($(titlex)+(titley)-(0,0.9)$) {\color{TTUblue} \textbf{\authorField}};
+\node [anchor=south west] (author-field) at ($(titlex)+(titley)-(0,0.9)$) {\color{TTUblue} \textbf{\authorField}};
 % \makeatother
-\node [anchor=south west] at ($(titlex)+(titley)-(0,1.55)$) {\color{TTUblue} {\footnotesize \nameOfDepartment}};
-\node [anchor=south west] at ($(titlex)+(titley)-(0,1.9)$) {\color{TTUblue} {\footnotesize \nameOfSchool}};
-\node [anchor=south west] at ($(titlex)+(titley)-(0,2.25)$) {\color{TTUblue} {\footnotesize \nameOfUniversity}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,1.75)$) {\color{TTUblue} {\scriptsize \nameOfDepartment}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,2.0)$) {\color{TTUblue} {\scriptsize \nameOfSchool}};
+\node [anchor=south west] at ($(titlex)+(titley)-(0,2.25)$) {\color{TTUblue} {\scriptsize \nameOfUniversity}};
 % \makeatletter
 \node [anchor=south west] (cur-date) at ($(titlex)+(titley)-(-11,2.25)$) {\color{TTUblue} {\footnotesize \dateOfPresentation}};
-\node [anchor=south east] at ($(cur-date.north east)+(0,0.05)$) {\color{TTUblue} {\footnotesize \href{\authorFieldEMail}{\authorFieldEMail}}};
+\node [anchor=south east] at ($(cur-date.south east)-(4,0)$) {\color{TTUblue} {\scriptsize \href{\authorFieldEMail}{\authorFieldEMail}}};
+\node [anchor=north west] at ($(author-field.north east)+(4.75,0)$) {\footnotesize \color{TTUblue} \begin{tabular}{l@{~:~}l}
+  Supervisor & \supervisor\\
+  Co-supervisor & \cosupervisor\\
+\end{tabular}};
+% \node [anchor=south west] at ($(author-field.south east)+(4,-0.5)$) {\color{TTUblue} {Co-supervisor:~\cosupervisor}};
+% \node [anchor=south east] at ($(cur-date.north east)+(0,0.05)$) {\color{TTUblue} {\scriptsize \href{\authorFieldEMail}{\authorFieldEMail}}};
 
 % \makeatother
 \end{tikzpicture}
