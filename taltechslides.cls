@@ -46,16 +46,8 @@
 %         BoldItalicFont = FreeSans Bold Oblique,
 %       ] {FreeSans}
 % \setmonofont[Scale=1.0]{FreeMono}
-\IfFontExistsTF{Verdana}{%
-  \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Verdana}%
-}{%
-  \IfFontExistsTF{Lato}{%
-    \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Lato}%
-  }{}%
-}
-% \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Lato}
 % \setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Verdana} % {Lato}
-
+\setmainfont[Ligatures = {TeX, Common}, SmallCapsFeatures={Letters=SmallCaps}]{Lato}
 
 
 \RequirePackage{tikz}
@@ -133,20 +125,8 @@
 
 
 % definitions
-% \newcommand{\ignore}[1]{}
-% \newcommand\authorField{}
-% \newcommand\titleNameLongOne{}
-% \newcommand\titleNameLongTwo{}
-% \newcommand\titleNameShort{}
-% \newcommand\dateOfPresentation{}
-
-
-% \newcommand*\authorField[1]{\def\@authorField{#1}}
-% \newcommand*\titleNameLongOne[1]{\def\@titleNameLongOne{#1}}
-% \newcommand*\titleNameLongTwo[1]{\def\@titleNameLongTwo{#1}}
-% \newcommand*\titleNameShort[1]{\def\@titleNameShort{#1}}
-% \newcommand*\dateOfPresentation[1]{\def\@dateOfPresentation{#1}}
-
+\newcommand{\ignore}[1]{}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 
 \input{taltechslidesdefinitions.tex}
 
@@ -170,14 +150,16 @@
 \node [anchor=south west] at ($(titlex)+(titley)+(0,0.65)$) {\color{TTUred} \uppercase{\Large \textbf{\titleNameLongOne}}};
 \node [anchor=south west] at ($(titlex)+(titley)$) {\color{TTUpink} \uppercase{\Large \textbf{\titleNameLongTwo}}};
 % \makeatletter
-\node [anchor=south west] (author-field) at ($(titlex)+(titley)-(0,0.9)$) {\color{TTUblue} \textbf{\authorField}};
+\node [anchor=south west] (author-field) at ($(titlex)+(titley)-(0,0.8)$) {\color{TTUblue} \textbf{\authorField}};
 % \makeatother
 \node [anchor=south west] at ($(titlex)+(titley)-(0,1.75)$) {\color{TTUblue} {\scriptsize \nameOfDepartment}};
 \node [anchor=south west] at ($(titlex)+(titley)-(0,2.0)$) {\color{TTUblue} {\scriptsize \nameOfSchool}};
 \node [anchor=south west] at ($(titlex)+(titley)-(0,2.25)$) {\color{TTUblue} {\scriptsize \nameOfUniversity}};
 % \makeatletter
 \node [anchor=south west] (cur-date) at ($(titlex)+(titley)-(-11,2.25)$) {\color{TTUblue} {\footnotesize \dateOfPresentation}};
-\node [anchor=south east] at ($(cur-date.south east)-(4,0)$) {\color{TTUblue} {\scriptsize \href{\authorFieldEMail}{\authorFieldEMail}}};
+% \node [anchor=south east] at ($(cur-date.south east)-(4,0)$) {\color{TTUblue} {\scriptsize \href{\authorFieldEMail}{\authorFieldEMail}}};
+\node [anchor=north west] at ($(author-field.south west)+(0,0.15)$) {\color{TTUblue} {\scriptsize \href{\authorFieldEMail}{\authorFieldEMail}}};
+
 \node [anchor=north west] at ($(author-field.north east)+(4.75,0)$) {\footnotesize \color{TTUblue} \begin{tabular}{l@{~:~}l}
   Supervisor & \supervisor\\
   Co-supervisor & \cosupervisor\\
